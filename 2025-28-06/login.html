@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="page.css">
+</head>
+<body>
+    <table class="login">
+        <tr>
+            <th colspan="2" style="align-items: center;">Login Form</th>
+        </tr>
+        <tr>
+            <td><label for="username">Username</label></td>
+            <td><input type="text" id="username" name="name"></td>
+        </tr>
+        <tr>
+            <td><label for="password">Password</label></td>
+            <td><input type="password" id="password" name="password"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <button onclick="Authenticate()">Submit</button>
+            </td>
+        </tr>
+    </table>
+    <script src="login.js"></script>
+</body>
+</html>
