@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    position: relative;
+    background-color: pink;
+    width: 300px;             
+    height: 200px;  
+    border: 2px solid black;
+    padding: 20px;
+}
