@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, grey, black);
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+#mainpage {
+  width: 700px;
+  height: auto;
+  border: 5px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* === Popup Styles === */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 400px;
+  background: linear-gradient(135deg, #0099ff, #33ccff); /* Totodile water-themed */
+  box-shadow: -4px 0 15px rgba(0,0,0,0.5);
+  padding: 25px;
+  overflow-y: auto;
+  z-index: 10;
+  animation: slideIn 0.3s ease-out;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.popup-content {
+  position: relative;
+}
+
+#close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+.popup-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.popup h2 {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 2rem;
+  margin: 10px 0;
+  color: #fff700;
+  text-shadow: 2px 2px #005588;
+}
+
+.popup p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 700px; /* or 100% if you want it responsive */
+  margin: auto;
+}
+
+#mainpage {
+  width: 100%;
+  height: auto;
+  border: 5px solid white;
+  border-radius: 10px;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  width: 90%;
+  padding: 10px;
+  font-family: 'Luckiest Guy', cursive;
+  text-shadow: 2px 2px 4px black;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.overlay-text h1 {
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.overlay-text span {
+  color: #fff700;
+}
+
+.overlay-text .tagline {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  margin-top: 6px;
+  color: #e0f7ff;
+}
+
+.pokeball-icon {
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
