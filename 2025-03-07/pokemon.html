@@ -4,28 +4,44 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pokemon</title>
-   <link rel="stylesheet" href="pokemon.css" />
+  <link rel="stylesheet" href="pokemon.css" />
   <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
 </head>
 <body>
   <header class="header">
     <img src="pokeball.png" alt="Pokeball" class="pokeball-icon">
-    <h1> Pokédex Entry: <span>Totodile</span></h1>
+    <h1>Pokédex Entry: <span id="pokemon-name">Totodile</span></h1>
   </header>
+
   <div class="container">
-   <div class="image-wrapper">
-  <img src="totodile.gif" alt="Totodile GIF" id="mainpage">
+    <div class="slider">
+      <!-- Left Pokémon -->
+      <div class="side-img" onclick="showPokemon(0)">
+        <img src="squirtle.gif" alt="Squirtle">
+      </div>
+
+      <!-- Main Pokémon -->
+      <div class="image-wrapper">
+        <img src="totodile.gif" alt="Totodile GIF" id="mainpage" onclick="openPopup()">
+      </div>
+
+      <!-- Right Pokémon -->
+      <div class="side-img" onclick="showPokemon(2)">
+        <img src="piplup.gif" alt="Piplup">
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup Box -->
   <div id="popup" class="popup">
     <div class="popup-content">
-      <span id="close-btn">&times;</span>
-      <img src="totodile.jpg" alt="Totodile Image" class="popup-img" />
-      <h2>Totodile</h2>
-      <p>
+      <span id="close-btn" onclick="closePopup()">&times;</span>
+      <img src="totodile.jpg" alt="Totodile Image" class="popup-img" id="popup-img"/>
+      <h2 id="popup-title">Totodile</h2>
+      <p id="popup-description">
         Totodile is a Water-type Pokémon introduced in Generation II. It is known for its playful but mischievous behavior, and its jaw power is surprisingly strong for its size.
       </p>
     </div>
-  </div>
   </div>
 
   <script src="pokemon.js"></script>
