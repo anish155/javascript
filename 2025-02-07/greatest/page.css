@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-color: aquamarine;
+    background: linear-gradient(to bottom,aqua,violet);
     display: flex;
     justify-content: center;
     align-items: center;
