@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom,lime,lightgreen,lightyellow,yellow);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    position: relative;
+    background-color: rgba(255,255,255,0.4);
+    border: 8px solid white;
+    border-radius: 13px;
+    padding:30px;
+}
+
+
