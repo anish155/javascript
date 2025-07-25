@@ -7,11 +7,36 @@
     <link rel="stylesheet" type="text/css" href="missing.css">
 </head>
 <body>
-    <div class="container">
+    <!-- <div class="container">
     <div id="inputs"></div>
     <button onclick="addInput()">Add Number</button>
     <button onclick="findMissing()">Submit</button>
-</div>
+</div> -->
+
+    <div class="container">
+        <table>
+            <tr>
+                <td>
+                    <label for="nums">Enter the numbers:</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="nums" id="nums" placeholder="Enter multiple numbers using commas">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="findMissing()">Submit</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <textarea name="missed number" id="missing"></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
     <script src="missing.js"></script>
 </body>
 </html>
