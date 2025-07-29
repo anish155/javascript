@@ -9,7 +9,14 @@
 <body>
     <div class="container">
         <h1><b>My Playlist:</b></h1>
-        <div class="music-card">
+        <label for="language-select"><b>Select Language:</b></label>
+            <select id="language-select" onchange="filterSongs()">
+                <option value="all">All</option>
+                <option value="english">English</option>
+                <option value="japanese">Japanese</option>
+                <option value="chinese">Chinese</option>
+            </select>
+        <div class="music-card" data-language="english">
             <div class="music_img">
                 <img src="/2025-27-07/cal/img/invincible.jpeg" alt="Invincible - OneRepublic">
             </div>
@@ -22,7 +29,7 @@
             </div>
         </div>
 
-        <div class="music-card">
+        <div class="music-card" data-language="english">
             <div class="music_img">
                 <img src="/2025-27-07/cal/img/nobody.png" alt="Nobody - OneRepublic"  width="225" height="225">
             </div>
@@ -35,7 +42,7 @@
             </div>
         </div>
 
-         <div class="music-card">
+         <div class="music-card" data-language="english">
             <div class="music_img">
                 <img src="/2025-27-07/cal/img/silence.jpeg" alt="Before You Exit - Silence"  width="225" height="225">
             </div>
@@ -48,7 +55,7 @@
             </div>
         </div>
 
-        <div class="music-card">
+        <div class="music-card" data-language="english">
             <div class="music_img">
                 <img src="/2025-27-07/cal/img/hey.jpeg" alt="Fias - Hey"  width="225" height="225">
             </div>
@@ -61,18 +68,20 @@
             </div>
         </div>
 
-        <div class="music-card">
+        <div class="music-card" data-language="japanese">
             <div class="music_img">
-                <img src="/2025-27-07/cal/img/hey.jpeg" alt="Fias - Hey"  width="225" height="225">
+                <img src="/2025-27-07/cal/img/watch_me.jpeg" alt="Yoasobi - Watch me"  width="225" height="225">
             </div>
             <div class="music_player">
                 <audio controls>
-                    <source src="/2025-27-07/cal/audio/hey.mp3" type="audio/mp3">
+                    <source src="/2025-27-07/cal/audio/watch_me.mp3" type="audio/mp3">
                     Your browser does not support the audio element.
                 </audio>
-                <p>Hey – Fias</p>
+                <p>Watch me – Yoasobi</p>
             </div>
         </div>
+
     </div>
+    <script src="music.js"></script>
 </body>
 </html>
