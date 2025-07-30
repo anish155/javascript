@@ -50,3 +50,99 @@ h1 {
     margin: 0;
     font-weight: bold;
 }
+
+/* LOGIN MODAL ONLY – Safe for music.html */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal .login-box {
+    border: 5px solid wheat;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    width: 350px;
+    font-family: Arial, sans-serif;
+}
+
+
+.modal .login-box h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+
+.modal .login_con {
+    border: 2px solid black;
+    border-radius: 9px;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+
+.modal .login_con input[type="text"],
+.modal .login_con input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+.modal .login_con button {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal .login_con button:hover {
+    background-color: #444;
+}
+
+.modal .login_con td {
+    text-align: center; 
+    padding: 8px 0;
+}
+
+.modal .login_con table {
+    margin: 0 auto; 
+}
+
+.login-btn {
+    position: absolute;
+    top: 20px;
+    right: 80px;  
+    z-index: 1000;
+}
+
+.login-btn img {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.login-btn img:hover {
+    transform: scale(1.1);
+}
+

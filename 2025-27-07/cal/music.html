@@ -7,6 +7,11 @@
     <link rel="stylesheet" type="text/css" href="music.css">
 </head>
 <body>
+    <header>
+        <div class="Login_btn">
+            <a href="#" onclick="openLogin()" title="Login"><img src="/2025-27-07/cal/img/login.png" alt="Login"></a>
+        </div>
+    </header>
     <div class="container">
         <h1><b>My Playlist:</b></h1>
         <label for="language-select"><b>Select Language:</b></label>
@@ -96,5 +101,31 @@
 
     </div>
     <script src="music.js"></script>
+
+    <div id="loginModal" class="modal">
+    <div class="container login-box">
+        <h1><b>LOGIN</b></h1>
+        <div class="login_con">
+            <table>
+                <tr>
+                    <td><label for="username">USERNAME</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="name" id="username" placeholder="Enter your username"></td>
+                </tr>
+                <tr>
+                    <td><label for="password">PASSWORD</label></td>
+                </tr>
+                <tr>
+                    <td><input type="password" name="code" id="password" placeholder="Enter your password"></td>
+                </tr>
+                <tr>
+                    <td><button onclick="closeLogin()">Submit</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="login.js"></script>
 </body>
 </html>
