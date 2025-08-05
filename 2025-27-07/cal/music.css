@@ -188,3 +188,26 @@ h1 {
 .shuffle-btn:hover {
     background: #0056b3;
 }
+
+.auto-btn {
+    background-color: #888;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auto-btn.on {
+    background-color: #4CAF50;
+}
+
+.auto-btn:hover {
+    background-color: #45a049;
+}
+
+
