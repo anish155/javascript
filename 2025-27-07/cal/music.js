@@ -114,3 +114,66 @@ function playNextVisibleSong() {
         console.log("Reached end of visible songs.");
     }
 }
+
+let favorites = []; 
+
+function toggleFavorite() {
+    const bottomAudio = document.getElementById("bottom-audio");
+    const bottomTitle = document.getElementById("bottom-title").innerText;
+    const bottomArtist = document.getElementById("bottom-artist").innerText;
+    const bottomArt = document.getElementById("bottom-art").src;
+    const favoriteBtn = document.getElementById("favoriteBtn");
+
+    const song = {
+        title: bottomTitle,
+        artist: bottomArtist,
+        src: bottomAudio.src,
+        art: bottomArt
+    };
+
+    
+    const index = favorites.findIndex(fav => fav.src === song.src);
+
+    if (index === -1) {
+    favorites.push(song);
+    favoriteBtn.innerText = "❤️";
+    favoriteBtn.classList.add("liked");
+} else {
+    favorites.splice(index, 1);
+    favoriteBtn.innerText = "🤍";
+    favoriteBtn.classList.remove("liked");
+}
+
+    renderFavorites();
+}
+
+function renderFavorites() {
+    const container = document.getElementById("favorites-container");
+    const title = document.getElementById("favorites-title");
+
+    container.innerHTML = ""; 
+    if (favorites.length > 0) {
+        title.style.display = "block";
+        container.style.display = "flex";
+    } else {
+        title.style.display = "none";
+        container.style.display = "none";
+    }
+
+    favorites.forEach(song => {
+        const card = document.createElement("div");
+        card.classList.add("music-card");
+        card.innerHTML = `
+            <div class="music_img">
+                <img src="${song.art}" alt="${song.title}" width="225" height="225">
+            </div>
+            <div class="music_player">
+                <audio controls>
+                    <source src="${song.src}">
+                </audio>
+                <p>${song.title} – ${song.artist}</p>
+            </div>
+        `;
+        container.appendChild(card);
+    });
+}
