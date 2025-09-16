@@ -75,7 +75,7 @@ header h1{
 }
 
 main{
-     flex: 1;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -109,4 +109,40 @@ footer {
     color: #fff;
     font-size: 14px;
     border-top: 3px solid wheat;
+}
+
+#loader {
+    position: fixed;
+    top:0; left:0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    flex-direction: column;
+    color: white;
+}
+
+.typing {
+    font-size: 36px;
+    letter-spacing: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid white;
+    animation: typing 2s steps(12, end), blink 0.7s step-end infinite;
+}
+
+.cursor {
+    display: inline-block;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 12ch; } 
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
 }
