@@ -30,7 +30,7 @@ header {
     border-bottom: 3px solid wheat;
     position: sticky;
     top: 0;
-    animation: slideDown 0.8s ease;
+    animation: slideDown 1.8s ease 2s;
 }
 
 @keyframes slideDown {
