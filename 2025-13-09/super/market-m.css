@@ -225,6 +225,80 @@ header h1 {
     color: #222;
 }
 
+.itemModal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 15px;
+    width: 60%;           /* smaller than 80% */
+    max-width: 500px;     /* smaller max width */
+    border-radius: 10px;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.close {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.slider {
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.slides img {
+    display: none;
+    width: 100%;         /* full width of modal */
+    height: 250px;       /* fixed height for all slides */
+    object-fit: cover;   /* crop/fit image nicely */
+    border-radius: 10px;
+}
+
+.slides img.active {
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+    }
+    .slides img {
+        height: 180px;
+    }
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 8px 12px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.95);}
+    to {opacity: 1; transform: scale(1);}
+}
 
 footer {
     text-align: center;
