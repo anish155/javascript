@@ -69,6 +69,28 @@ header p{
     transform: scale(1.1);
 }
 
+#reset-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background: #ff4757;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#reset-btn:hover {
+    background: #e84118;
+    transform: scale(1.05);
+}
+
+#reset-btn:active {
+    transform: scale(0.95);
+}
+
 footer{
     margin-top: 190px;
     text-align: center;
