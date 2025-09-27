@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" type="text/css" href="hangman.css">
+</head>
+<body>
+    <header>
+        <h1>Hangman</h1>
+        <p>you can only make guesses.</p>
+    </header>
+    <main>
+        <div class="word" id="word"></div>
+        <p class="status" id="status"></p>
+
+        <input type="text" id="guess" maxlength="1">
+        <button onclick="makeGuess()">Guess</button>
+    </main>
+    <footer>
+        <p>Made with ❤️ using HTML, CSS & JS</p>
+    </footer>
+    <script src="hangman.js"></script>
+</body>
+</html>
