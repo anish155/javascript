@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg,
+    #f6d365 0%,   
+    #fda085 25%,  
+    #a1c4fd 50%,  
+    #c2e9fb 75%,  
+    #e0c3fc 100%);
+    background-blend-mode: soft-light;
+    font-family: sans-serif;
+}
+
+.shape-form{
+    width: 120px;
+    height: 120px;
+    display: flex;
+    border: 1px solid black;
+    animation: morph 3s infinite ease-in-out;
+}
+
+@keyframes morph{
+    0%{
+        border-radius: 10px;
+        clip-path: none;
+        transform: rotate(0deg);
+    }
+
+    33%{
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        border-radius: 0;
+        transform: rotate(0deg);
+    }
+
+    66%{
+        border-radius: 50%;
+        clip-path: none;
+        transform: rotate(0deg);
+    }
+
+    100%{
+        border-radius: 10px;
+        clip-path: none;
+    }
+
+}
+
