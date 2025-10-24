@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(8,60px);
+    grid-template-columns: repeat(8,60px);
+    border: 5px solid #333;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.square{
+    width: 60px;
+    height: 60px;
+}
+
+.square:nth-child(even) {
+    background: linear-gradient(145deg, #a47551, #8b5a2b);
+}
+
+.square:nth-child(odd) {
+    background: linear-gradient(145deg, #e8c39e, #d2a679);
+}
+
+button.square {
+            border: none;
+            cursor: pointer;
+        }
+
+button.square:hover {
+            outline: 2px solid yellow;
+        }
