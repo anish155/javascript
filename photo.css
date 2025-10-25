@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right,rgba(100,40,80,0.8),rgba(20,60,120,0.7));
+}
+
+.photoes{
+    max-width: 900px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.photoes img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
