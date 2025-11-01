@@ -100,3 +100,98 @@ footer li {
 color: #666;
 font-size: 0.9rem;
 }
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+
+.modal-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.modal {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+    width: 300px;
+    text-align: center;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal {
+    transform: scale(1);
+}
+
+
+.modal h2 {
+    margin-bottom: 15px;
+    color: #b4148c;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.modal input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    transition: box-shadow 0.2s;
+}
+
+.modal input:focus {
+    box-shadow: 0 0 6px rgba(180,20,140,0.5);
+}
+
+
+.modal .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.modal .actions button {
+    flex: 1;
+    margin: 0 5px;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#saveTask {
+    background: linear-gradient(to right, #b4148c, #ff64b4);
+    color: white;
+}
+
+#cancelTask {
+    background: #ddd;
+    color: #333;
+}
+
+.modal .actions button:hover {
+    transform: scale(1.05);
+}
